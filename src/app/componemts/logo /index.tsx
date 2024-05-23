@@ -2,7 +2,14 @@
 import { Box } from "@chakra-ui/react";
 import Image from "next/image";
 
-export const Logologin = () => {
+interface LogoUrlProps {
+  url: string;
+}
+
+
+export const Logologin = ({url}: LogoUrlProps) => {
+
+  const urlstring=url
   return (
     <>
       <Box
@@ -10,7 +17,7 @@ export const Logologin = () => {
         cursor={"pointer"}
       >
         <Image
-          src="/LOGO REDE BRASIL RP_C.svg"
+          src={urlstring}
           alt="Vercel Logo"
           width={300}
           height={500}
